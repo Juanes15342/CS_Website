@@ -1,0 +1,31 @@
+@page
+@model MatriculaApp.Pages.MatriculaFormModel
+@{
+    ViewData["Title"] = "Formulario de Matrícula";
+}
+
+<h2>Formulario de Matrícula</h2>
+
+<form method="post">
+    <label>Nombre:</label>
+    <input type="text" name="Nombre" class="form-control" required />
+
+    <label>Documento:</label>
+    <input type="text" name="Documento" class="form-control" required />
+
+    <label>Curso:</label>
+    <input type="text" name="Curso" class="form-control" required />
+
+    <label>Email:</label>
+    <input type="email" name="Email" class="form-control" required />
+
+    <br />
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
+@if (Model.Mensaje != null)
+{
+    <div class="alert alert-success mt-3">@Model.Mensaje</div>
+}
+
